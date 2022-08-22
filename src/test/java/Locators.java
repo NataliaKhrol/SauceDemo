@@ -22,5 +22,8 @@ public class Locators extends BaseTest {
         driver.findElement(By.cssSelector("class~=list"));
         driver.findElement(By.cssSelector("script[src^='static']"));
         driver.findElement(By.cssSelector("link[href$=css]"));
+        driver.findElement(By.xpath("//button[@data-test='remove-sauce-labs-bike-light']"));
+        driver.findElement(By.xpath("//button[text()='Remove']"));
+        driver.findElement(By.xpath("//button[contains(text(),'Open Menu')]"));
     }
 }
