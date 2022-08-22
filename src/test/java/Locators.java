@@ -11,6 +11,7 @@ public class Locators extends BaseTest {
         driver.findElement(By.className("inventory_item"));
         driver.findElement(By.cssSelector("a"));
         driver.findElement(By.linkText("Twitter"));
+        driver.findElement(By.partialLinkText("Twi"));
         driver.findElement(By.cssSelector("a"));
         driver.findElement(By.cssSelector(".inventory"));
         driver.findElement(By.cssSelector(".social.title"));
