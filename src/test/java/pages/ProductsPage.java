@@ -8,6 +8,7 @@ public class ProductsPage extends BasePage {
     private final By PAGE_TITLE = By.cssSelector(".title");
 
     public ProductsPage(WebDriver driver) {
+
         super(driver);
     }
 
