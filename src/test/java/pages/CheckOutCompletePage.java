@@ -5,18 +5,14 @@ import org.openqa.selenium.WebDriver;
 
 public class CheckOutCompletePage extends BasePage {
 
-    // public static boolean isOpened;
-    private final By PAGE_COMPLETE = By.cssSelector(".complete-header");
+    private final By PAGE_COMPLETE = By.tagName("h2");
 
-   public CheckOutCompletePage(WebDriver driver) {
+    public CheckOutCompletePage(WebDriver driver) {
         super(driver);
     }
 
-    public void open() {
-        driver.get(BASE_URL + ".checkout-complete");
-    }
+    public boolean isOpenRight() {
 
-    public boolean isOpened() {
         return driver.findElement(PAGE_COMPLETE).isDisplayed();
     }
 }

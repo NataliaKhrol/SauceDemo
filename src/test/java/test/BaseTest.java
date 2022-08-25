@@ -18,6 +18,7 @@ public class BaseTest {
     CartPage cartPage;
     CheckOutPage checkOutPage;
     CheckOutCompletePage checkOutCompletePage;
+    CheckoutSecondStepPage checkoutSecondStepPage;
 
     @BeforeMethod
     public void setup() {
@@ -33,6 +34,7 @@ public class BaseTest {
         cartPage = new CartPage(driver);
         checkOutPage = new CheckOutPage(driver);
          checkOutCompletePage = new CheckOutCompletePage(driver);
+         checkoutSecondStepPage = new CheckoutSecondStepPage(driver);
     }
 
     @AfterMethod(alwaysRun = true)

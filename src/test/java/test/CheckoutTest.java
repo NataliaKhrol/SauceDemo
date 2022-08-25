@@ -9,30 +9,19 @@ import static org.testng.Assert.assertTrue;
 public class CheckoutTest extends BaseTest {
 
     @Test
-    public void checkoutShouldPerform() {
-        driver.get("https://www.saucedemo.com/cart.html");
-        driver.findElement(By.linkText("Checkout")).click();
-        driver.findElement(By.id("first-name")).sendKeys("Rada");
-        driver.findElement(By.id("last-name")).sendKeys("radan");
-        driver.findElement(By.id("postal-code")).sendKeys("12345");
-        driver.findElement(By.cssSelector("[value=continue]")).click();
-        driver.findElement(By.id("finish")).click();
-        boolean isOpened = driver.findElement(By.cssSelector(".complete-header")).isDisplayed();
-        assertTrue(isOpened, "The page failed to open");
-    }
-  /*  @Test
     public void checkOutShouldBeCorrect() {
+        loginPage.open();
+        loginPage.login("standard_user", "secret_sauce");
+        productsPage.addToCart("Sauce Labs Backpack");
+        productsPage.clickCart();
+        cartPage.clickCheckoutButton();
+        checkOutPage.informationShouldBeFilledIn("Rada", "Radan", "12345");
+        assertTrue(checkOutPage.isOpened(), "The page failed to open");
+        checkoutSecondStepPage.finishBut();
+        assertTrue(checkOutCompletePage.isOpenRight(), "Checkout failded");
 
-        checkOutPage.open();
-        checkOutPage.checkOut("Rada", "Radan", "12345");
-        assertTrue(checkOutCompletePage.isOpened(), "The page failed to open");
-
-
-        /*driver.findElement(By.id("first-name")).sendKeys("Rada");
-        driver.findElement(By.id("postal-code")).sendKeys("12345");
-        driver.findElement(By.cssSelector("[value=continue]")).click();
-        driver.findElement(By.id("finish")).click();
-        boolean isOpened = driver.findElement(By.cssSelector(".complete-header")).isDisplayed();
-*/
     }
+}
+
+
 
