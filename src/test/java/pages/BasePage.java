@@ -11,7 +11,9 @@ public class BasePage {
     BasePage(WebDriver driver) {
         this.driver = driver;
     }
+
     public void clickCart() {
+
         driver.findElement(CART).click();
     }
 
