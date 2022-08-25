@@ -1,10 +1,14 @@
 package pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import javax.swing.*;
 
 public class BasePage {
     WebDriver driver;
@@ -20,6 +24,7 @@ public class BasePage {
     }
 
     public void clickCart() {
+        clickJS(CART);
 
         driver.findElement(CART).click();
     }
@@ -33,5 +38,13 @@ public class BasePage {
         //NoSuchElementException
         //TimeOutException
     }
+
+}//это для heroku
+public void clickJS(By locator) {
+    Actions actions = new Actions(driver);
+    actions.moveToElement(driver.findElement(locator))
+            .keyDown("0")
+
+    ( (JavascriptExecutor) driver).executeScript("arguments[0].click();", driver.findElement(locator));
 
 }
