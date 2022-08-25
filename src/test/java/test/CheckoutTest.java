@@ -18,7 +18,7 @@ public class CheckoutTest extends BaseTest {
         checkOutPage.informationShouldBeFilledIn("Rada", "Radan", "12345");
         assertTrue(checkOutPage.isOpened(), "The page failed to open");
         checkoutSecondStepPage.finishBut();
-        assertTrue(checkOutCompletePage.isOpenRight(), "Checkout failded");
+        assertTrue(checkOutCompletePage.isOpenRight(), "Checkout failed");
 
     }
 }

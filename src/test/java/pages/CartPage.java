@@ -8,12 +8,12 @@ public class CartPage extends BasePage {
     private final By CHECKOUT_BUTTON = By.id("checkout");
 
     public CartPage(WebDriver driver) {
+
         super(driver);
     }
 
-    public void open() {
-
-        driver.get(BASE_URL + "cart.html");
+    public boolean isOpened() {
+        return waitForVisibility(CHECKOUT_BUTTON);
     }
 
     public String getProductPrice(String product) {
