@@ -8,7 +8,6 @@ public class CartPage extends BasePage {
     private final By CHECKOUT_BUTTON = By.id("checkout");
 
     public CartPage(WebDriver driver) {
-
         super(driver);
     }
 

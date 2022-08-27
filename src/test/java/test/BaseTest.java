@@ -7,7 +7,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.*;
 
-import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 public class BaseTest {
@@ -18,7 +17,7 @@ public class BaseTest {
     CartPage cartPage;
     CheckOutPage checkOutPage;
     CheckOutCompletePage checkOutCompletePage;
-    CheckoutSecondStepPage checkoutSecondStepPage;
+    CheckoutOverviewPage checkoutOverviewPage;
 
     @BeforeMethod
     public void setup() {
@@ -34,7 +33,7 @@ public class BaseTest {
         cartPage = new CartPage(driver);
         checkOutPage = new CheckOutPage(driver);
          checkOutCompletePage = new CheckOutCompletePage(driver);
-         checkoutSecondStepPage = new CheckoutSecondStepPage(driver);
+         checkoutOverviewPage = new CheckoutOverviewPage(driver);
     }
 
     @AfterMethod(alwaysRun = true)

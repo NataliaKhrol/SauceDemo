@@ -15,4 +15,5 @@ public class CheckOutCompletePage extends BasePage {
 
         return driver.findElement(PAGE_COMPLETE).isDisplayed();
     }
+
 }

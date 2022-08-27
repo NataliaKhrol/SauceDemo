@@ -24,7 +24,7 @@ public class BasePage {
     }
 
     public void clickCart() {
-        clickJS(CART);
+      //  clickJS(CART);
 
         driver.findElement(CART).click();
     }
@@ -39,8 +39,9 @@ public class BasePage {
         //TimeOutException
     }
 
-}//это для heroku
-public void clickJS(By locator) {
+}
+//это для heroku
+/*public void clickJS(By locator) {
     Actions actions = new Actions(driver);
     actions.moveToElement(driver.findElement(locator))
             .keyDown("0")
@@ -48,3 +49,4 @@ public void clickJS(By locator) {
     ( (JavascriptExecutor) driver).executeScript("arguments[0].click();", driver.findElement(locator));
 
 }
+ */

@@ -12,7 +12,8 @@ public class CheckOutPage extends BasePage {
     private By LASTNAME_INPUT = By.id("last-name");
     private By ZIPCODE_INPUT = By.id("postal-code");
     private By CONTINUE_BUTTON = By.cssSelector("[data-test=continue]");
-    private final By PAGE_TITLE = By.xpath("//span[text()='Checkout: Overview']");
+
+
 
 
     public CheckOutPage(WebDriver driver) {
@@ -24,11 +25,9 @@ public class CheckOutPage extends BasePage {
 
     }
 
-    public boolean isOpened() {
-        return driver.findElement(PAGE_TITLE).isDisplayed();
-    }
 
-    public void informationShouldBeFilledIn(String firstName, String lastName, String zipCode) {
+
+    public void fillInCheckout(String firstName, String lastName, String zipCode) {
 
         driver.findElement(FIRSTNAME_INPUT).sendKeys(firstName);
         driver.findElement(LASTNAME_INPUT).sendKeys(lastName);
