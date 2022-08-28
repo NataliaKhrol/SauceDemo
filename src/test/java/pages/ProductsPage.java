@@ -9,10 +9,14 @@ import org.openqa.selenium.support.ui.Select;
 
 import java.util.List;
 
+import static org.testng.Assert.assertTrue;
+
 public class ProductsPage extends BasePage {
 
     private final By PAGE_TITLE = By.cssSelector(".title");
-    private By FILTER_BUTTON = By.cssSelector(".active_option");
+    private By FILTER_BUTTON = By.cssSelector(".product_sort_container");
+    WebElement element;
+    Select select;
 
 
     public ProductsPage(WebDriver driver) {
@@ -36,19 +40,35 @@ public class ProductsPage extends BasePage {
 
         driver.findElement(By.xpath(locator)).click();
     }
-    public void chooseFilter() {
-        WebElement element = driver.findElement(FILTER_BUTTON);
-        Select dropDown = new Select(element);
-        List<WebElement> option = dropDown.getOptions();
+
+    public void selectButton() {
+        element = driver.findElement(FILTER_BUTTON);
+        select = new Select(element);
+    }
+
+    public void findAllElementsOfDropdown() {
+        List<WebElement> option = select.getOptions();
         int size = option.size();
         for (int i = 0; i < size; i++) {
             String options = option.get(i).getText();
             System.out.println(options);
         }
+
     }
 
+    public void visibleText(String optionName) {
+        select.selectByVisibleText(optionName);
+
+
+    }
+
+    public boolean isSelected() {
+        return select.getFirstSelectedOption().isSelected();
+
+
+    }
 }
 
-    // проверить наличие всех элементов дроп-дауна
 
+// проверить наличие всех элементов дроп-дауна
 

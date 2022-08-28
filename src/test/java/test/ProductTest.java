@@ -23,42 +23,26 @@ public class ProductTest extends BaseTest {
         assertTrue(cartPage.isOpened());
         assertEquals(cartPage.getProductPrice("Sauce Labs Backpack"), "$29.99",
                 "Price is not correct");
-        // productsPage.chooseFilter();
     }
 
     @Test
-    public void filterTest() {
+    public void elementsOfDropdownExist() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         assertTrue(productsPage.isOpened());
-        productsPage.addToCart("Sauce Labs Backpack");
-        //           WebElement element = driver.findElement(By.xpath("//span[contains(@class, 'select_container')]"));
-        WebElement element = driver.findElement(By.cssSelector(".product_sort_container"));
-        // System.out.println(element.getTagName());
-        // System.out.println(element);
-        Select select = new Select(element);
-        List<WebElement> option = select.getOptions();
-        int size = option.size();
-        for (int i = 0; i < size; i++) {
-            String options = option.get(i).getText();
-            System.out.println(options);
-        }
+        productsPage.selectButton();
+        productsPage.findAllElementsOfDropdown();
     }
 
     @Test
-    public void chooseOption() {
+    public void chooseOption1() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         assertTrue(productsPage.isOpened());
-        productsPage.addToCart("Sauce Labs Backpack");
-        //           WebElement element = driver.findElement(By.xpath("//span[contains(@class, 'select_container')]"));
-        WebElement element = driver.findElement(By.cssSelector(".product_sort_container"));
-        // System.out.println(element.getTagName());
-        // System.out.println(element);
-        Select select = new Select(element);
-        select.selectByVisibleText("Name (A to Z)");
-        boolean isSelected = select.getFirstSelectedOption().isSelected();
-        assertTrue(isSelected, "Option is not selected");
+        productsPage.selectButton();
+        productsPage.visibleText("Name (Z to A)");
+        productsPage.selectButton();
+        assertTrue(productsPage.isSelected(), "Option is not selected");
     }
 
     @Test
@@ -66,8 +50,42 @@ public class ProductTest extends BaseTest {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
         assertTrue(productsPage.isOpened());
+        productsPage.selectButton();
+        productsPage.visibleText("Name (A to Z)");
+        productsPage.selectButton();
+        assertTrue(productsPage.isSelected(), "Option is not selected");
+    }
 
-        //           WebElement element = driver.findElement(By.xpath("//span[contains(@class, 'select_container')]"));
+    @Test
+    public void chooseOption3() {
+        loginPage.open();
+        loginPage.login("standard_user", "secret_sauce");
+        assertTrue(productsPage.isOpened());
+        productsPage.selectButton();
+        productsPage.visibleText("Price (low to high)");
+        productsPage.selectButton();
+        assertTrue(productsPage.isSelected(), "Option is not selected");
+    }
+
+    @Test
+    public void chooseOption4() {
+        loginPage.open();
+        loginPage.login("standard_user", "secret_sauce");
+        assertTrue(productsPage.isOpened());
+        productsPage.selectButton();
+        productsPage.visibleText("Price (high to low)");
+        productsPage.selectButton();
+        assertTrue(productsPage.isSelected(), "Option is not selected");
+    }
+}
+/*ƒима, сорри, но можно € не буду удал€ть эти ниже закоментированные черновики? это был путь поиска ошибок
+    @Test
+    public void chooseOption2() {
+        loginPage.open();
+        loginPage.login("standard_user", "secret_sauce");
+        assertTrue(productsPage.isOpened());
+
+        //WebElement element = driver.findElement(By.xpath("//span[contains(@class, 'select_container')]"));
         WebElement element = driver.findElement(By.cssSelector(".product_sort_container"));
         // System.out.println(element.getTagName());
         // System.out.println(element);
