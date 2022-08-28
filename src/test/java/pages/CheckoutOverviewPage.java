@@ -20,7 +20,7 @@ public class CheckoutOverviewPage extends BasePage {
         return driver.findElement(PAGE_TITLE).isDisplayed();
             }
 
-    public void finishBut() {
+    public void finishButton() {
         driver.findElement(FINISH_BUTTON).click();
     }
     public String getItemCost() {

@@ -16,7 +16,7 @@ public class CheckoutTest extends BaseTest {
         cartPage.clickCheckoutButton();
         checkOutPage.fillInCheckout("Rada", "Radan", "12345");
         assertTrue(checkoutOverviewPage.isOpened(), "The page failed to open");
-        checkoutOverviewPage.finishBut();
+        checkoutOverviewPage.finishButton();
         assertTrue(checkOutCompletePage.isOpenRight(), "Checkout failed");
 
     }
@@ -33,11 +33,55 @@ public class CheckoutTest extends BaseTest {
         assertEquals(checkoutOverviewPage.getItemCost(), "Item total: $29.99", "Item total error");
         assertEquals(checkoutOverviewPage.getTax(), "Tax: $2.40", "Tax error");
         assertEquals(checkoutOverviewPage.getTotal(), "Total: $32.39", "Total error");
-        checkoutOverviewPage.finishBut();
+        checkoutOverviewPage.finishButton();
         assertTrue(checkOutCompletePage.isOpenRight(), "Checkout failed");
 
     }
-}
 
+    @Test
+    public void checkOutEmptyFields() {
+        loginPage.open();
+        loginPage.login("standard_user", "secret_sauce");
+        productsPage.addToCart("Sauce Labs Backpack");
+        productsPage.clickCart();
+        cartPage.clickCheckoutButton();
+        checkOutPage.fillInCheckout("", "", "");
+        assertEquals(checkOutPage.getError(), "Error: First Name is required", "Error while checking out");
+
+    }
+    @Test
+    public void checkOutEmptyFieldLastName() {
+        loginPage.open();
+        loginPage.login("standard_user", "secret_sauce");
+        productsPage.addToCart("Sauce Labs Backpack");
+        productsPage.clickCart();
+        cartPage.clickCheckoutButton();
+        checkOutPage.fillInCheckout("Rada", "", "");
+        assertEquals(checkOutPage.getError(), "Error: Last Name is required", "Error while checking out");
+
+    }
+    @Test
+    public void checkOutEmptyFieldZipCode() {
+        loginPage.open();
+        loginPage.login("standard_user", "secret_sauce");
+        productsPage.addToCart("Sauce Labs Backpack");
+        productsPage.clickCart();
+        cartPage.clickCheckoutButton();
+        checkOutPage.fillInCheckout("Rada", "Radan", "");
+        assertEquals(checkOutPage.getError(), "Error: Postal Code is required", "Error while checking out");
+
+    }
+    @Test
+    public void checkOutSpaceInFields() {
+        loginPage.open();
+        loginPage.login("standard_user", "secret_sauce");
+        productsPage.addToCart("Sauce Labs Backpack");
+        productsPage.clickCart();
+        cartPage.clickCheckoutButton();
+        checkOutPage.fillInCheckout(" ", " ", " ");
+        assertEquals(checkOutPage.getError(), "Error: First Name is required", "Error while checking out");
+
+    }
+}
 
 

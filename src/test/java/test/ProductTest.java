@@ -2,11 +2,15 @@ package test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import static org.testng.Assert.*;
 
@@ -77,7 +81,43 @@ public class ProductTest extends BaseTest {
         productsPage.selectButton();
         assertTrue(productsPage.isSelected(), "Option is not selected");
     }
+
+    @Test
+    public void socialMediaButton() {
+
+        loginPage.open();
+        loginPage.login("standard_user", "secret_sauce");
+        assertTrue(productsPage.isOpened());
+        driver.findElement(By.linkText("Twitter")).click();
+        productsPage.socialMediaCheck();
+        productsPage.socialMediaCheck();
+        assertTrue(productsPage.isOpen(), "Does not");
+    }
+
+    @Test
+    public void socialMediaButton2() {
+
+        loginPage.open();
+        loginPage.login("standard_user", "secret_sauce");
+        assertTrue(productsPage.isOpened());
+        driver.findElement(By.linkText("Facebook")).click();
+        productsPage.socialMediaCheck();
+    }
+
+    @Test
+    public void socialMediaButton3() {
+
+        loginPage.open();
+        loginPage.login("standard_user", "secret_sauce");
+        assertTrue(productsPage.isOpened());
+        driver.findElement(By.linkText("LinkedIn")).click();
+        productsPage.socialMediaCheck();
+
+
+    }
 }
+
+
 /*ƒима, сорри, но можно € не буду удал€ть эти ниже закоментированные черновики? это был путь поиска ошибок
     @Test
     public void chooseOption2() {
@@ -98,6 +138,11 @@ public class ProductTest extends BaseTest {
         assertTrue(isSelected, "Option is not selected");
     }
 }
+      /*  WebDriverWait wait = new WebDriverWait(driver, 10);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'@saucelabs')]")));
+        Set<String> allHandles = driver.getWindowHandles();
+        String url = driver.switchTo().window("1").getCurrentUrl();
+        assertEquals(url, "https://twitter.com/saucelabs", "Error");
 
 
 

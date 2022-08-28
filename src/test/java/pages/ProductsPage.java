@@ -1,13 +1,13 @@
 package pages;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 import static org.testng.Assert.assertTrue;
 
@@ -15,6 +15,7 @@ public class ProductsPage extends BasePage {
 
     private final By PAGE_TITLE = By.cssSelector(".title");
     private By FILTER_BUTTON = By.cssSelector(".product_sort_container");
+    private By NEW_WINDOW = By.xpath("//span[contains(text(),'@saucelabs')]");
     WebElement element;
     Select select;
 
@@ -60,6 +61,21 @@ public class ProductsPage extends BasePage {
     public boolean isSelected() {
         return select.getFirstSelectedOption().isSelected();
     }
+
+    public void socialMediaCheck() {
+        Set<String> allWindowHandles = driver.getWindowHandles();
+        ArrayList<String> tabs = new ArrayList<String>(allWindowHandles);
+        System.out.println("No. of tabs: " + tabs.size());
+        int size = tabs.size();
+        for (int i = 0; i < size; i++) {
+            String secondPageOpened = tabs.get(1);
+
+             driver.switchTo().window(secondPageOpened);
+        }
+    }
+        public boolean isOpen() {
+            return driver.findElement(NEW_WINDOW).isDisplayed();
+        }
 }
 
 

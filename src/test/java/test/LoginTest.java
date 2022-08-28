@@ -32,7 +32,7 @@ public class LoginTest extends BaseTest {
        LoginPage loginPage = new LoginPage(driver);
        loginPage.open();
        loginPage.login("","secret_sauce");
-        String error = driver.findElement(By.cssSelector("[data-test=error]")).getText();
+       // String error = driver.findElement(By.cssSelector("[data-test=error]")).getText();
         assertEquals(loginPage.getError(), "Epic sadface: Username is required", "Wrong error message shown");
     }
 }
