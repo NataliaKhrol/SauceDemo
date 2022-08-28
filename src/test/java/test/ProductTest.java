@@ -91,7 +91,7 @@ public class ProductTest extends BaseTest {
         driver.findElement(By.linkText("Twitter")).click();
         productsPage.socialMediaCheck();
         productsPage.socialMediaCheck();
-        assertTrue(productsPage.isOpen(), "Does not");
+        assertTrue(productsPage.isOpen(), "Does not open the right window");
     }
 
     @Test
@@ -102,6 +102,7 @@ public class ProductTest extends BaseTest {
         assertTrue(productsPage.isOpened());
         driver.findElement(By.linkText("Facebook")).click();
         productsPage.socialMediaCheck();
+        assertTrue(productsPage.isOpen(), "Does not open the right window");
     }
 
     @Test
@@ -112,7 +113,7 @@ public class ProductTest extends BaseTest {
         assertTrue(productsPage.isOpened());
         driver.findElement(By.linkText("LinkedIn")).click();
         productsPage.socialMediaCheck();
-
+        assertTrue(productsPage.isOpenLinkedin(), "Does not open the right window");
 
     }
 }

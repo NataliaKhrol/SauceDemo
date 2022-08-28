@@ -16,9 +16,9 @@ public class ProductsPage extends BasePage {
     private final By PAGE_TITLE = By.cssSelector(".title");
     private By FILTER_BUTTON = By.cssSelector(".product_sort_container");
     private By NEW_WINDOW = By.xpath("//span[contains(text(),'@saucelabs')]");
+    private By NEW_WINDOWLINKEDIN = By.xpath("//h1[contains(text(),'Присоединитесь к LinkedIn')]");
     WebElement element;
     Select select;
-
 
     public ProductsPage(WebDriver driver) {
         super(driver);
@@ -70,12 +70,17 @@ public class ProductsPage extends BasePage {
         for (int i = 0; i < size; i++) {
             String secondPageOpened = tabs.get(1);
 
-             driver.switchTo().window(secondPageOpened);
+            driver.switchTo().window(secondPageOpened);
         }
     }
-        public boolean isOpen() {
-            return driver.findElement(NEW_WINDOW).isDisplayed();
-        }
+
+    public boolean isOpen() {
+        return driver.findElement(NEW_WINDOW).isDisplayed();
+    }
+
+    public boolean isOpenLinkedin() {
+        return driver.findElement(NEW_WINDOWLINKEDIN).isDisplayed();
+    }
 }
 
 
