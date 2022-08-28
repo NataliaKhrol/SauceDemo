@@ -20,7 +20,6 @@ public class ProductsPage extends BasePage {
 
 
     public ProductsPage(WebDriver driver) {
-
         super(driver);
     }
 
@@ -31,7 +30,6 @@ public class ProductsPage extends BasePage {
     public boolean isOpened() {
         return waitForVisibility(PAGE_TITLE);
         //driver.findElement(PAGE_TITLE).isDisplayed();
-
     }
 
     public void addToCart(String product) {
@@ -53,19 +51,14 @@ public class ProductsPage extends BasePage {
             String options = option.get(i).getText();
             System.out.println(options);
         }
-
     }
 
     public void visibleText(String optionName) {
         select.selectByVisibleText(optionName);
-
-
     }
 
     public boolean isSelected() {
         return select.getFirstSelectedOption().isSelected();
-
-
     }
 }
 
