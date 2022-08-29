@@ -11,7 +11,7 @@ public class CheckOutPage extends BasePage {
     private By FIRSTNAME_INPUT = By.id("first-name");
     private By LASTNAME_INPUT = By.id("last-name");
     private By ZIPCODE_INPUT = By.id("postal-code");
-    private By CONTINUE_BUTTON = By.cssSelector("[data-test=continue]");
+    private By CONTINUE_BUTTON = By.id("continue");
     private By ERROR_MESSAGE = By.cssSelector("[data-test=error]");
 
 
