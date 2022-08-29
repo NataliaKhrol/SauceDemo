@@ -119,7 +119,7 @@ public class ProductTest extends BaseTest {
 }
 
 
-/*ƒима, сорри, но можно € не буду удал€ть эти ниже закоментированные черновики? это был путь поиска ошибок
+/*ƒима, сорри, можно € не буду удал€ть эти ниже закоментированные черновики? это был путь поиска ошибок
     @Test
     public void chooseOption2() {
         loginPage.open();
@@ -139,29 +139,8 @@ public class ProductTest extends BaseTest {
         assertTrue(isSelected, "Option is not selected");
     }
 }
-      /*  WebDriverWait wait = new WebDriverWait(driver, 10);
+       WebDriverWait wait = new WebDriverWait(driver, 10);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'@saucelabs')]")));
         Set<String> allHandles = driver.getWindowHandles();
         String url = driver.switchTo().window("1").getCurrentUrl();
-        assertEquals(url, "https://twitter.com/saucelabs", "Error");
-
-
-
-/*
-
-            select.selectByVisibleText("Name (Z to A)");
-    boolean isSelected2 = select.getFirstSelectedOption().isSelected();
-
-    assertTrue(isSelected2, "Option is not selected");
-}
-    }
-            }
-
-/*
-select.selectByVisibleText("Price (high to low)");
-            boolean isSelected3 = select.getFirstSelectedOption().isSelected();
-            Assert.assertTrue(isSelected3, "Option is not selected");
-            select.selectByVisibleText("Price (low to high)");
-            boolean isSelected4 = select.getFirstSelectedOption().isSelected();
-            Assert.assertTrue(isSelected4, "Option is not selected");
- */
+        assertEquals(url, "https://twitter.com/saucelabs", "Error");*/

@@ -33,8 +33,6 @@ public class Locators extends BaseTest {
         driver.findElement(By.xpath("//button[text()='Remove']"));
         driver.findElement(By.xpath("//button[contains(text(),'Open Menu')]"));
     }
-
-
-    }
+}
 
 
