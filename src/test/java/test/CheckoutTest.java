@@ -16,7 +16,7 @@ public class CheckoutTest extends BaseTest {
         cartPage.clickCheckoutButton();
         checkOutPage.fillInCheckout("Rada", "Radan", "12345");
         assertTrue(checkoutOverviewPage.isOpened(), "The page failed to open");
-        checkoutOverviewPage.finishButton();
+        checkoutOverviewPage.clickFinish();
         assertTrue(checkOutCompletePage.isOpenRight(), "Checkout failed");
 
     }
@@ -33,7 +33,7 @@ public class CheckoutTest extends BaseTest {
         assertEquals(checkoutOverviewPage.getItemCost(), "Item total: $29.99", "Item total error");
         assertEquals(checkoutOverviewPage.getTax(), "Tax: $2.40", "Tax error");
         assertEquals(checkoutOverviewPage.getTotal(), "Total: $32.39", "Total error");
-        checkoutOverviewPage.finishButton();
+        checkoutOverviewPage.clickFinish();
         assertTrue(checkOutCompletePage.isOpenRight(), "Checkout failed");
 
     }
