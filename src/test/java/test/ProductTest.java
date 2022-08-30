@@ -17,7 +17,9 @@ import static org.testng.Assert.*;
 
 public class ProductTest extends BaseTest {
 
-  //  @Test(retryAnalyzer = Retry)
+    @Test(description = "Check if price of product is correct in the cart")
+   // @Test(enabled = false) - не будет запускаться такой тест
+    // (retryAnalyzer = Retry.class)
     public void productPriceShouldBeCorrect() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");

@@ -3,6 +3,7 @@
 <suite name="Smoke Test" parallel="tests" thread-count="2">
     <listeners>
         <listener class-name="test.AnnotationTransformer"/>
+        <listener class-name="test.TestListener"/>
 
     </listeners>
     <test name="Chrome">
