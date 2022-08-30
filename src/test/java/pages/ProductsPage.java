@@ -16,7 +16,7 @@ public class ProductsPage extends BasePage {
     private final By PAGE_TITLE = By.cssSelector(".title");
     private By FILTER_BUTTON = By.cssSelector(".product_sort_container");
     private By NEW_WINDOW = By.xpath("//span[contains(text(),'@saucelabs')]");
-    private By NEW_WINDOWLINKEDIN = By.xpath("//h1[contains(text(),'Присоединитесь к LinkedIn')]");
+    private By NEW_WINDOWLINKEDIN = By.xpath("//h1[contains(text(),'РџСЂРёСЃРѕРµРґРёРЅРёС‚РµСЃСЊ Рє LinkedIn')]");
     WebElement element;
     Select select;
 
@@ -84,5 +84,5 @@ public class ProductsPage extends BasePage {
 }
 
 
-// проверить наличие всех элементов дроп-дауна
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ-пїЅпїЅпїЅпїЅпїЅ
 

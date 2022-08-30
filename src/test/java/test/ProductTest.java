@@ -17,7 +17,7 @@ import static org.testng.Assert.*;
 
 public class ProductTest extends BaseTest {
 
-    @Test
+  //  @Test(retryAnalyzer = Retry)
     public void productPriceShouldBeCorrect() {
         loginPage.open();
         loginPage.login("standard_user", "secret_sauce");
