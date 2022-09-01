@@ -1,7 +1,11 @@
 package test;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class Locators extends BaseTest {
 
@@ -30,3 +34,5 @@ public class Locators extends BaseTest {
         driver.findElement(By.xpath("//button[contains(text(),'Open Menu')]"));
     }
 }
+
+
