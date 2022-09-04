@@ -18,9 +18,8 @@ public class LoginTest extends BaseTest {
         assertTrue(productsPage.isOpened(), "Login failed");
     }
 
-    @Test
+ /*   @Test //изначальный вид тестов. будем параметризировать эти 2 теста
     public void wrongPassword() {
-        LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         loginPage.login("standard_user", "gnhcgmi");
         assertEquals(loginPage.getError(),
@@ -30,15 +29,14 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void emptyUserName() {
-        LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         loginPage.login("", "secret_sauce");
         // String error = driver.findElement(By.cssSelector("[data-test=error]")).getText();
         assertEquals(loginPage.getError(), "Epic sadface: Username is required", "Wrong error message shown");
-    }
-    @Test(dataProvider = "loginData") //имя из строки 49
+    }*/
+
+    @Test(dataProvider = "loginData") //имя из строки 48
     public void negativeLogin(String userName, String password, String error) {
-        LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         loginPage.login(userName, password);
         assertEquals(loginPage.getError(), error," Wrong error message shown");
@@ -48,8 +46,9 @@ public class LoginTest extends BaseTest {
         return new Object[][]{
                 {"standard_user", "gnhcgmi", "Epic sadface: Username and password do not match" +
                         " any user in this service" },
-                {"", "secret_sauce", "Epic sadface: Username is required"}
+                {"", "secret_sauce", "Epic sadface: Username is required"},
+                {" ", " ", "Epic sadface: Username and password do not match any user in this service"},
+                {"1", "1", "Epic sadface: Username and password do not match any user in this service"}
         };
     }
-
 }
