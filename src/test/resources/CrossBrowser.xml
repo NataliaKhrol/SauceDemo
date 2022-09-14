@@ -14,7 +14,7 @@
             <parameter name="browser" value="chrome"></parameter>
         </classes>
     </test> <!-- Test -->
-    <test name="Thread #2">
+    <test name="Firefox">
         <classes>
             <class name="test.LoginTest" />
             <class name="test.ProductTest" />
