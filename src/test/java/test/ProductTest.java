@@ -18,7 +18,7 @@ import static org.testng.Assert.*;
 public class ProductTest extends BaseTest {
 
     @Test(description = "Check if price of product is correct in the cart")
-   // @Test(enabled = false) - не будет запускаться такой тест
+   // @Test(enabled = false) - РЅРµ Р±СѓРґРµС‚ Р·Р°РїСѓСЃРєР°С‚СЊСЃСЏ С‚Р°РєРѕР№ С‚РµСЃС‚
     // (retryAnalyzer = Retry.class)
     public void productPriceShouldBeCorrect() {
         loginPage.open();
@@ -121,7 +121,7 @@ public class ProductTest extends BaseTest {
 }
 
 
-/*Дима, сорри, можно я не буду удалять эти ниже закоментированные черновики? это был путь поиска ошибок
+/*Р”РёРјР°, СЃРѕСЂСЂРё, РјРѕР¶РЅРѕ СЏ РЅРµ Р±СѓРґСѓ СѓРґР°Р»СЏС‚СЊ СЌС‚Рё РЅРёР¶Рµ Р·Р°РєРѕРјРµРЅС‚РёСЂРѕРІР°РЅРЅС‹Рµ С‡РµСЂРЅРѕРІРёРєРё? СЌС‚Рѕ Р±С‹Р» РїСѓС‚СЊ РїРѕРёСЃРєР° РѕС€РёР±РѕРє
     @Test
     public void chooseOption2() {
         loginPage.open();
