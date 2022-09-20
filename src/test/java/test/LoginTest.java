@@ -13,8 +13,10 @@ public class LoginTest extends BaseTest {
 
     @Test
     public void loginSuccess() {
-        loginPage.open();
-        loginPage.login("standard_user", "secret_sauce");
+        loginPage
+                .open()
+                .login("standard_user", "secret_sauce");
+
         assertTrue(productsPage.isOpened(), "Login failed");
     }
 
@@ -36,18 +38,20 @@ public class LoginTest extends BaseTest {
         // String error = driver.findElement(By.cssSelector("[data-test=error]")).getText();
         assertEquals(loginPage.getError(), "Epic sadface: Username is required", "Wrong error message shown");
     }
+
     @Test(dataProvider = "loginData") //имя из строки 49
     public void negativeLogin(String userName, String password, String error) {
         LoginPage loginPage = new LoginPage(driver);
         loginPage.open();
         loginPage.login(userName, password);
-        assertEquals(loginPage.getError(), error," Wrong error message shown");
+        assertEquals(loginPage.getError(), error, " Wrong error message shown");
     }
-@DataProvider
+
+    @DataProvider
     public Object[][] loginData() {
         return new Object[][]{
                 {"standard_user", "gnhcgmi", "Epic sadface: Username and password do not match" +
-                        " any user in this service" },
+                        " any user in this service"},
                 {"", "secret_sauce", "Epic sadface: Username is required"}
         };
     }

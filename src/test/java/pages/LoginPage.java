@@ -16,13 +16,15 @@ public class LoginPage extends BasePage {
     }
 
     @Step("Opening login page")
-    public void open2() {
+    public LoginPage open2() {
         driver.get(BASE_URL);
+        return this;
     }
 
     @Step("Login by '{userName}' using password '{password}'")
-    public void open() {
+    public LoginPage open() {
         driver.get(BASE_URL);
+        return this;
     }
 
     public void login(String userName, String password) {

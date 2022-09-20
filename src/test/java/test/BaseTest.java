@@ -22,6 +22,7 @@ public class BaseTest {
     CheckOutCompletePage checkOutCompletePage;
     CheckoutOverviewPage checkoutOverviewPage;
 
+
     @Parameters({"browser"})
     @BeforeMethod
     public void setup(@Optional("chrome") String browser, ITestContext testContext) {
