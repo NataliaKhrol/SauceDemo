@@ -9,6 +9,7 @@ import org.testng.ITestContext;
 import org.testng.annotations.*;
 import pages.*;
 
+
 import java.util.concurrent.TimeUnit;
 
 @Listeners(TestListener.class)
@@ -21,20 +22,23 @@ public class BaseTest {
     CheckOutPage checkOutPage;
     CheckOutCompletePage checkOutCompletePage;
     CheckoutOverviewPage checkoutOverviewPage;
+ //   protected GoogleSteps steps;
 
     @Parameters({"browser"})
-    @BeforeMethod
+    @BeforeMethod(description = "Opening the browser")
     public void setup(@Optional("chrome") String browser, ITestContext testContext) {
         if (browser.equals("chrome")) {
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-             options.setHeadless(true);
+            options.setHeadless(true);
             driver = new ChromeDriver(options);
+            //  steps = new GoogleSteps(driver);
         } else if (browser.equals("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
             //TODO implement firefox opening
-        } testContext.setAttribute("driver", driver);
+        }
+            testContext.setAttribute("driver", driver);
 
 
         driver.manage().window().maximize();
