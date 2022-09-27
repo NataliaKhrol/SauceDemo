@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="14" passed="14" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-09-20T17:36:20 MSK" name="Smoke Test" finished-at="2022-09-20T17:37:37 MSK" duration-ms="76474">
+    <groups>
+    </groups>
+    <test started-at="2022-09-20T17:36:20 MSK" name="Thread #1" finished-at="2022-09-20T17:36:52 MSK" duration-ms="31512">
+      <class name="test.LoginTest">
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:20 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:36:28 MSK" duration-ms="7348" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@511d5d04]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginSuccess()[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:28 MSK" name="loginSuccess" finished-at="2022-09-20T17:36:33 MSK" duration-ms="4944" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginSuccess -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:33 MSK" name="close" finished-at="2022-09-20T17:36:34 MSK" duration-ms="936" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:34 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:36:36 MSK" duration-ms="1491" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@511d5d04]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="negativeLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:36 MSK" name="negativeLogin" data-provider="loginData" finished-at="2022-09-20T17:36:38 MSK" duration-ms="2416" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[gnhcgmi]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Epic sadface: Username and password do not match any user in this service]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLogin -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:38 MSK" name="close" finished-at="2022-09-20T17:36:39 MSK" duration-ms="353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:39 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:36:40 MSK" duration-ms="1377" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@511d5d04]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="negativeLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:40 MSK" name="negativeLogin" data-provider="loginData" finished-at="2022-09-20T17:36:43 MSK" duration-ms="3065" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Epic sadface: Username is required]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLogin -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:43 MSK" name="close" finished-at="2022-09-20T17:36:44 MSK" duration-ms="357" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:44 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:36:45 MSK" duration-ms="1255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@511d5d04]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="negativeLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:45 MSK" name="negativeLogin" data-provider="loginData" finished-at="2022-09-20T17:36:47 MSK" duration-ms="2376" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[ ]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Epic sadface: Username and password do not match any user in this service]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLogin -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:47 MSK" name="close" finished-at="2022-09-20T17:36:48 MSK" duration-ms="363" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:48 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:36:49 MSK" duration-ms="1255" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@511d5d04]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="negativeLogin(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:49 MSK" name="negativeLogin" data-provider="loginData" finished-at="2022-09-20T17:36:51 MSK" duration-ms="1938" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Epic sadface: Username and password do not match any user in this service]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- negativeLogin -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.LoginTest@27ead29e]" started-at="2022-09-20T17:36:51 MSK" name="close" finished-at="2022-09-20T17:36:52 MSK" duration-ms="372" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- test.LoginTest -->
+    </test> <!-- Thread #1 -->
+    <test started-at="2022-09-20T17:36:20 MSK" name="Thread #2" finished-at="2022-09-20T17:37:37 MSK" duration-ms="76474">
+      <class name="test.ProductTest">
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:20 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:36:28 MSK" duration-ms="7348" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@682c1e93]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="chooseOption1()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:28 MSK" name="chooseOption1" finished-at="2022-09-20T17:36:33 MSK" duration-ms="5296" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseOption1 -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:33 MSK" name="close" finished-at="2022-09-20T17:36:34 MSK" duration-ms="831" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:34 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:36:36 MSK" duration-ms="1482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@682c1e93]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="chooseOption2()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:36 MSK" name="chooseOption2" finished-at="2022-09-20T17:36:38 MSK" duration-ms="2487" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseOption2 -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:38 MSK" name="close" finished-at="2022-09-20T17:36:39 MSK" duration-ms="363" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:39 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:36:40 MSK" duration-ms="1377" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@682c1e93]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="chooseOption3()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:40 MSK" name="chooseOption3" finished-at="2022-09-20T17:36:44 MSK" duration-ms="3838" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseOption3 -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:44 MSK" name="close" finished-at="2022-09-20T17:36:44 MSK" duration-ms="370" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:44 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:36:46 MSK" duration-ms="1320" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@682c1e93]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="chooseOption4()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:46 MSK" name="chooseOption4" finished-at="2022-09-20T17:36:49 MSK" duration-ms="3316" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- chooseOption4 -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:49 MSK" name="close" finished-at="2022-09-20T17:36:49 MSK" duration-ms="243" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:49 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:36:51 MSK" duration-ms="1318" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@682c1e93]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="elementsOfDropdownExist()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:51 MSK" name="elementsOfDropdownExist" finished-at="2022-09-20T17:36:53 MSK" duration-ms="2300" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- elementsOfDropdownExist -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:53 MSK" name="close" finished-at="2022-09-20T17:36:53 MSK" duration-ms="343" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:53 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:36:55 MSK" duration-ms="1224" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@682c1e93]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="productPriceShouldBeCorrect()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:55 MSK" name="productPriceShouldBeCorrect" description="Check if price of product is correct in the cart" finished-at="2022-09-20T17:36:57 MSK" duration-ms="2552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- productPriceShouldBeCorrect -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:57 MSK" name="close" finished-at="2022-09-20T17:36:58 MSK" duration-ms="364" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:58 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:36:59 MSK" duration-ms="1112" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@682c1e93]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="socialMediaButton()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:36:59 MSK" name="socialMediaButton" finished-at="2022-09-20T17:37:12 MSK" duration-ms="12992" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- socialMediaButton -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:37:12 MSK" name="close" finished-at="2022-09-20T17:37:13 MSK" duration-ms="921" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:37:13 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:37:16 MSK" duration-ms="3023" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@682c1e93]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="socialMediaButton2()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:37:16 MSK" name="socialMediaButton2" finished-at="2022-09-20T17:37:27 MSK" duration-ms="10896" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- socialMediaButton2 -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:37:27 MSK" name="close" finished-at="2022-09-20T17:37:28 MSK" duration-ms="949" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+        <test-method is-config="true" signature="setup(java.lang.String, org.testng.ITestContext)[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:37:28 MSK" name="setup" description="Opening the browser" finished-at="2022-09-20T17:37:29 MSK" duration-ms="1090" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[org.testng.TestRunner@682c1e93]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="socialMediaButton3()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:37:29 MSK" name="socialMediaButton3" finished-at="2022-09-20T17:37:35 MSK" duration-ms="6392" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- socialMediaButton3 -->
+        <test-method is-config="true" signature="close()[pri:0, instance:test.ProductTest@41d7b27f]" started-at="2022-09-20T17:37:36 MSK" name="close" finished-at="2022-09-20T17:37:37 MSK" duration-ms="965" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- close -->
+      </class> <!-- test.ProductTest -->
+    </test> <!-- Thread #2 -->
+  </suite> <!-- Smoke Test -->
+</testng-results>

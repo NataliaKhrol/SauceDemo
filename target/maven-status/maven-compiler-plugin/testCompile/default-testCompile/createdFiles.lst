@@ -1,0 +1,17 @@
+pages\BasePage.class
+test\BaseTest.class
+test\Locators.class
+pages\ProductsPage.class
+test\LoginTest.class
+test\ProductTest.class
+test\AnnotationTransformer.class
+pages\LoginPage.class
+test\TestListener.class
+pages\CartPage.class
+test\CheckoutTest.class
+test\AllureUtils.class
+test\CartTest.class
+test\Retry.class
+pages\CheckOutCompletePage.class
+pages\CheckOutPage.class
+pages\CheckoutOverviewPage.class
